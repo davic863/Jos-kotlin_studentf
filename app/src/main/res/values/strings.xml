@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">StudentsForum</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="text_forgot_password">Forgot password</string>
+    <string name="text_click">Not yet Registered then click here</string>
+    <string name="text_login">Login</string>
+    <string name="tv_singup_fopassword">forgot password</string>
+    <string name="text_signup_name">Name</string>
+
+    <string-array name="States">
+        <item> Select state of Origin</item>
+        <item> FCT ABUJa</item>
+        <item> Abia State</item>
+        <item> Adamawa State</item>
+        <item> Akwa Ibom </item>
+        <item> Anambra State</item>
+        <item> Bauchi State</item>
+        <item> Benue State</item>
+        <item> Borno State</item>
+        <item> Cross River State</item>
+        <item> Delta State</item>
+        <item> Edo State </item>
+        <item> Enugu State</item>
+        <item> Ebonyi State</item>
+        <item> Gombe  State</item>
+        <item> Imo    State </item>
+        <item> Ekiti State</item>
+        <item> Jigawa State</item>
+        <item> Kano   State</item>
+        <item> Kaduna  State</item>
+        <item> Kastina State</item>
+        <item> Kebbi  State</item>
+        <item> Kogi   State</item>
+        <item> Kwara  State</item>
+        <item> Lagos  State</item>
+        <item> Niger  State</item>
+        <item> Osun state</item>
+        <item> ondo State</item>
+        <item> Ogun State</item>
+        <item> Oyo  State</item>
+        <item> Plateau State</item>
+        <item> Rivers  State</item>
+        <item> Sokoto State</item>
+        <item> Taraba State</item>
+        <item> Yobe  State</item>
+        <item> Zamfara State</item>
+
+    </string-array>
+</resources>

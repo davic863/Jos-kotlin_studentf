@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+      <TextView
+          android:id="@+id/tv_signup_page"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Signup page"
+          android:textColor="@color/colorPrimary"
+          android:textStyle="italic"
+          android:layout_centerHorizontal="true"
+          android:textSize="18sp"
+          />
+
+      <ImageView
+          android:id="@+id/im_person"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:src="@drawable/ic_person"
+          android:layout_below="@+id/tv_signup_page"
+          android:layout_marginTop="15dp"
+          />
+
+
+      <EditText
+          android:id="@+id/et_signup_name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="@string/text_signup_name"
+          android:layout_toEndOf="@+id/im_person"
+          android:paddingBottom="10dp"
+          android:textColorHint="@android:color/black"
+          android:layout_marginEnd="20dp"
+          android:textSize="18sp"
+          android:layout_marginTop="30dp"
+          android:inputType="textPersonName"
+          android:imeOptions="actionNext"
+          />
+      <RadioGroup
+          android:id="@+id/gender_group"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/et_signup_name"
+          android:orientation="horizontal"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:layout_marginTop="15dp"
+          >
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Gender"
+              android:padding="5dp"
+              android:textSize="18sp"
+              android:textColor="@android:color/black"
+              />
+
+          <RadioButton
+              android:id="@+id/gender_male"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="male"
+              android:textIsSelectable="true"
+              android:layout_marginStart="20dp"
+              android:textColorHint="@android:color/black"
+              />
+          <RadioButton
+              android:id="@+id/gender_female"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="Female"
+              android:textIsSelectable="true"
+              android:textColorHint="@android:color/black"
+              />
+      </RadioGroup>
+
+      <EditText
+          android:id="@+id/et_signup_Dob"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="date"
+          android:layout_marginStart="20dp"
+          android:layout_marginTop="40dp"
+          android:layout_marginEnd="20dp"
+          android:textSize="18sp"
+          android:textColorHint="@android:color/black"
+          android:hint="Date of Birth"
+          android:layout_below="@id/gender_group"
+          />
+      <RadioGroup
+          android:id="@+id/Status_group"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/et_signup_Dob"
+          android:orientation="horizontal"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:layout_marginTop="15dp"
+          >
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Status "
+              android:padding="5dp"
+              android:textSize="18sp"
+              android:textColor="@android:color/black"
+              />
+
+          <RadioButton
+              android:id="@+id/rb_married"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="married"
+              android:textIsSelectable="true"
+              android:layout_marginStart="20dp"
+              android:textColorHint="@android:color/black"
+              />
+          <RadioButton
+              android:id="@+id/rb_single"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:hint="Single"
+              android:textIsSelectable="true"
+              android:textColorHint="@android:color/black"
+              />
+      </RadioGroup>
+
+
+      <Spinner
+          android:id="@+id/sp_signup_oo"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:entries="@array/States"
+          android:layout_marginTop="15dp"
+          android:layout_below="@id/Status_group"
+          />
+
+
+     <LinearLayout
+         android:layout_marginTop="15dp"
+
+         android:layout_below="@id/sp_signup_oo"
+         android:id="@+id/chekbox_group"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="HOBBIES"
+             android:textSize="18sp"
+             android:layout_marginStart="20dp"
+             android:textColor="@android:color/black"
+             />
+
+         <CheckBox
+             android:id="@+id/cb_hobbies_2"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="Dancing"
+             android:textColorHint="@android:color/black"
+             />
+
+         <CheckBox
+             android:id="@+id/cb_hobbies3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="Reading"
+             android:textColorHint="@android:color/black"
+             />
+         <CheckBox
+             android:id="@+id/cb_hobbies_1"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="Singing"
+             android:textColorHint="@android:color/black"
+             />
+
+     </LinearLayout>
+        <EditText
+            android:id="@+id/et_phone_num"
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/chekbox_group"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Phone Number"
+            android:textSize="18sp"
+            android:imeOptions="actionNext"
+            android:textColorHint="@android:color/black"
+            android:inputType="number"
+            />
+        <EditText
+            android:id="@+id/et_sign_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:imeOptions="actionNext"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:hint="Email"
+            android:layout_below="@+id/et_phone_num"
+            android:textSize="18sp"
+            android:textColorHint="@android:color/black"
+            />
+        <EditText
+            android:id="@+id/et_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_below="@+id/et_sign_email"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColorHint="@android:color/black"
+            android:imeOptions="actionNext"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/et_signup_confm_password"
+            android:layout_below="@+id/et_signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:imeOptions="actionNext"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:hint="confirm Password"
+            android:textColorHint="@android:color/black"
+            android:inputType="textPassword"
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/et_signup_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_signup_confm_password"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:textColorHint="@android:color/black"
+            android:hint="Address"
+            android:imeOptions="actionDone"
+            android:textSize="18sp"
+            android:inputType="textLongMessage"
+            />
+
+        <Button
+            android:id="@+id/bt_signup_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="submit"
+            android:textColor="@android:color/black"
+            android:background="@color/colorPrimary"
+            android:layout_below="@+id/et_signup_Address"
+            android:textSize="25sp"
+            />
+
+
+  </RelativeLayout>
+
+</ScrollView>
