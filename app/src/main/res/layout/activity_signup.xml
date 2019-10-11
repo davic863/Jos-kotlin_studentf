@@ -22,27 +22,32 @@
           android:textSize="18sp"
           />
 
+
       <ImageView
           android:id="@+id/im_person"
-          android:layout_width="40dp"
-          android:layout_height="40dp"
+          android:layout_width="200dp"
+          android:layout_height="200dp"
           android:src="@drawable/ic_person"
           android:layout_below="@+id/tv_signup_page"
           android:layout_marginTop="15dp"
+          android:layout_centerInParent="true"
+          android:layout_marginBottom="25dp"
           />
 
 
       <EditText
+          android:layout_below="@+id/im_person"
+          android:drawableStart="@drawable/ic_person"
           android:id="@+id/et_signup_name"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:hint="@string/text_signup_name"
-          android:layout_toEndOf="@+id/im_person"
           android:paddingBottom="10dp"
           android:textColorHint="@android:color/black"
           android:layout_marginEnd="20dp"
           android:textSize="18sp"
           android:layout_marginTop="30dp"
+          android:layout_marginStart="20dp"
           android:inputType="textPersonName"
           android:imeOptions="actionNext"
           />
@@ -83,8 +88,7 @@
               android:textColorHint="@android:color/black"
               />
       </RadioGroup>
-
-      <EditText
+     <!-- <EditText
           android:id="@+id/et_signup_Dob"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
@@ -96,18 +100,18 @@
           android:textColorHint="@android:color/black"
           android:hint="Date of Birth"
           android:layout_below="@id/gender_group"
-          />
-      <RadioGroup
+          />-->
+    <!--  <RadioGroup
           android:id="@+id/Status_group"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          android:layout_below="@id/et_signup_Dob"
+          android:layout_below="@id/gender_group"
           android:orientation="horizontal"
           android:layout_marginStart="20dp"
           android:layout_marginEnd="20dp"
           android:layout_marginTop="15dp"
-          >
-          <TextView
+          >-->
+          <!--<TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
               android:text="Status "
@@ -115,8 +119,8 @@
               android:textSize="18sp"
               android:textColor="@android:color/black"
               />
-
-          <RadioButton
+-->
+         <!-- <RadioButton
               android:id="@+id/rb_married"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
@@ -132,8 +136,8 @@
               android:hint="Single"
               android:textIsSelectable="true"
               android:textColorHint="@android:color/black"
-              />
-      </RadioGroup>
+              />-->
+      <!--</RadioGroup>-->
 
 
       <Spinner
@@ -143,53 +147,73 @@
           android:layout_marginStart="20dp"
           android:entries="@array/States"
           android:layout_marginTop="15dp"
-          android:layout_below="@id/Status_group"
+          android:layout_below="@id/chekbox_group"
           />
 
 
      <LinearLayout
          android:layout_marginTop="15dp"
-
-         android:layout_below="@id/sp_signup_oo"
+        android:layout_marginBottom="40dp"
+         android:layout_below="@id/et_signup_confm_password"
          android:id="@+id/chekbox_group"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:orientation="horizontal"
+         android:orientation="vertical"
          >
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:text="HOBBIES"
+             android:text="TRACK"
              android:textSize="18sp"
              android:layout_marginStart="20dp"
              android:textColor="@android:color/black"
              />
 
          <CheckBox
-             android:id="@+id/cb_hobbies_2"
+             android:layout_marginStart="25dp"
+             android:id="@+id/cb_mobile_2"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:hint="Dancing"
+             android:hint="Mobile"
              android:textColorHint="@android:color/black"
              />
 
          <CheckBox
-             android:id="@+id/cb_hobbies3"
+             android:layout_marginStart="25dp"
+             android:id="@+id/cb_arvr"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:hint="Reading"
+             android:hint="AR/VR"
              android:textColorHint="@android:color/black"
              />
          <CheckBox
-             android:id="@+id/cb_hobbies_1"
+             android:layout_marginStart="25dp"
+             android:id="@+id/cb_bkend_1"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:hint="Singing"
+             android:hint="Back End"
+             android:textColorHint="@android:color/black"
+             />
+         <CheckBox
+             android:layout_marginStart="25dp"
+             android:id="@+id/cb_git"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="Git"
+             android:textColorHint="@android:color/black"
+             />
+         <CheckBox
+             android:layout_marginStart="25dp"
+             android:id="@+id/cb_digital"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="Digital Marketing"
              android:textColorHint="@android:color/black"
              />
 
      </LinearLayout>
-        <EditText
+
+       <!-- <EditText
             android:id="@+id/et_phone_num"
             android:layout_width="match_parent"
             android:padding="5dp"
@@ -203,21 +227,23 @@
             android:imeOptions="actionNext"
             android:textColorHint="@android:color/black"
             android:inputType="number"
-            />
+            />-->
         <EditText
+            android:drawableStart="@drawable/ic_email"
             android:id="@+id/et_sign_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:imeOptions="actionNext"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="60dp"
             android:hint="Email"
-            android:layout_below="@+id/et_phone_num"
+            android:layout_below="@+id/et_signup_name"
             android:textSize="18sp"
             android:textColorHint="@android:color/black"
             />
         <EditText
+            android:drawableStart="@drawable/ic_password"
             android:id="@+id/et_signup_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -233,6 +259,7 @@
             />
 
         <EditText
+            android:drawableStart="@drawable/ic_password"
             android:id="@+id/et_signup_confm_password"
             android:layout_below="@+id/et_signup_password"
             android:layout_width="match_parent"
@@ -248,11 +275,12 @@
             />
 
         <EditText
+            android:drawableStart="@drawable/ic_location"
             android:id="@+id/et_signup_Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/et_signup_confm_password"
-            android:layout_marginTop="40dp"
+            android:layout_below="@+id/sp_signup_oo"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:textColorHint="@android:color/black"
@@ -261,15 +289,28 @@
             android:textSize="18sp"
             android:inputType="textLongMessage"
             />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload image "
+            android:layout_marginStart="20dp"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_upload"
+            android:layout_below="@id/et_signup_Address"
+            />
 
         <Button
             android:id="@+id/bt_signup_submit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="submit"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
             android:textColor="@android:color/black"
             android:background="@color/colorPrimary"
-            android:layout_below="@+id/et_signup_Address"
+            android:layout_below="@+id/tv_upload"
             android:textSize="25sp"
             />
 

@@ -1,5 +1,6 @@
 package com.example.studentsforum
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import com.example.studentsforum.helpers.DatabaseHelper
 
 class LoginActivity : AppCompatActivity() {
 
@@ -25,6 +27,17 @@ class LoginActivity : AppCompatActivity() {
         val et_login_password:EditText = findViewById(R.id.et_login_password)
 
         val bt_submit_login : Button = findViewById(R.id.bt_login_submit)
+
+
+        val sharedPref =getSharedPreferences("LoginDetails", Context.MODE_PRIVATE)
+        val savedEmail =sharedPref.getString("email","")
+        val savedPassword =sharedPref.getString("password","")
+
+        if (savedEmail!=""&&savedPassword!=""){
+             val dashboard = Intent(this,MainActivity::class.java)
+            startActivity(dashboard)
+            finish()
+        }
 
         bt_submit_login.setOnClickListener(View.OnClickListener {
             val email :String = et_login_email.text.toString().trim()
@@ -43,8 +56,34 @@ class LoginActivity : AppCompatActivity() {
             }   else if (password.length<8){
 
                 et_login_password.setError("password too Short")
+
             }   else{
-                Toast.makeText(this,"all fields are valid", Toast.LENGTH_SHORT).show()
+
+                //create an object of the database  Helper class
+                val databaseHelper = DatabaseHelper(this)
+
+                if (databaseHelper.checkUser(email,password)){
+                    val sharedPreference =getSharedPreferences("LoginDetails", Context.MODE_PRIVATE)
+
+                    val editor = sharedPreference.edit()
+                    editor.putString("email",email)
+                    editor.putString("password",password)
+                    editor.apply()
+
+
+                    val dashboard =Intent(this,MainActivity::class.java)
+                    // passing information between two activities
+                    dashboard.putExtra("email",email)
+                    startActivity(dashboard)
+                    finish()
+                    Toast.makeText(this,"Login Successful",Toast.LENGTH_LONG).show()
+
+                }else{
+                    Toast.makeText(this,"Email/password combination incorrect",Toast.LENGTH_LONG).show()
+                }
+
+
+
             }
         })
 
